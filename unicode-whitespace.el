@@ -221,7 +221,6 @@
 (defvar unicode-whitespace-subdued-space             'unicode-whitespace-subdued-space             "Face variable to make font-lock happy.")
 (defvar unicode-whitespace-subdued-hspace            'unicode-whitespace-subdued-hspace            "Face variable to make font-lock happy.")
 (defvar unicode-whitespace-subdued-newline           'unicode-whitespace-subdued-newline           "Face variable to make font-lock happy.")
-(defvar unicode-whitespace-subdued-highlight         'unicode-whitespace-subdued-highlight         "Face variable to make font-lock happy.")
 (defvar unicode-whitespace-subdued-line              'unicode-whitespace-subdued-line              "Face variable to make font-lock happy.")
 
 ;;; customizable variables
@@ -532,12 +531,6 @@ a single character."
   "Unicode-whitespace face for newline characters."
   :group 'unicode-whitespace-faces)
 
-(defface unicode-whitespace-subdued-highlight
-  '((((background dark))  (:inherit font-lock-warning-face))
-    (((background light)) (:inherit font-lock-warning-face)))
-  "Unicode-whitespace face for highlighted characters."
-  :group 'unicode-whitespace-faces)
-
 (defface unicode-whitespace-subdued-line
   '((((background dark))  nil)
     (((background light)) nil))
@@ -784,7 +777,6 @@ With negative prefix ARG, sets faces back to default values."
         (setq whitespace-space             'whitespace-space           )
         (setq whitespace-hspace            'whitespace-hspace          )
         (setq whitespace-newline           'whitespace-newline         )
-        (setq whitespace-highlight         'whitespace-highlight       )
         (setq whitespace-line              'whitespace-line            ))
     ;; else
     (setq whitespace-empty             'unicode-whitespace-subdued-empty           )
@@ -796,7 +788,6 @@ With negative prefix ARG, sets faces back to default values."
     (setq whitespace-space             'unicode-whitespace-subdued-space           )
     (setq whitespace-hspace            'unicode-whitespace-subdued-hspace          )
     (setq whitespace-newline           'unicode-whitespace-subdued-newline         )
-    (setq whitespace-highlight         'unicode-whitespace-subdued-highlight       )
     (setq whitespace-line              'unicode-whitespace-subdued-line            )))
 
 ;;;###autoload
