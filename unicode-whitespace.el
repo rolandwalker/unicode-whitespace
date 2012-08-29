@@ -4,7 +4,7 @@
 ;;
 ;; Author: Roland Walker walker@pobox.com
 ;; URL: https://github.com/rolandwalker/unicode-whitespace.el
-;; Version: 0.2.0
+;; Version: 0.2.1
 ;; Last-Updated: 28 Aug 2012
 ;; EmacsWiki: UnicodeWhitespace
 ;; Package-Requires: ((ucs-utils "0.6.0") (persistent-soft "0.8.0") (pcache "0.2.3"))
@@ -228,7 +228,7 @@
 ;;;###autoload
 (defgroup unicode-whitespace nil
   "Teach whitespace-mode about fancy characters."
-  :version "0.2.0"
+  :version "0.2.1"
   :link '(emacs-commentary-link "unicode-whitespace")
   :prefix "unicode-whitespace-"
   :group 'extensions)
