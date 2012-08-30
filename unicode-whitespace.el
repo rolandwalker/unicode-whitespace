@@ -3,7 +3,8 @@
 ;; Copyright (c) 2012 Roland Walker
 ;;
 ;; Author: Roland Walker walker@pobox.com
-;; URL: https://github.com/rolandwalker/unicode-whitespace.el
+;; Homepage: http://github.com/rolandwalker/unicode-whitespace
+;; URL: http://raw.github.com/rolandwalker/unicode-whitespace/master/unicode-whitespace.el
 ;; Version: 0.2.1
 ;; Last-Updated: 28 Aug 2012
 ;; EmacsWiki: UnicodeWhitespace
