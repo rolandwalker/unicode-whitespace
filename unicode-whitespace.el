@@ -232,7 +232,8 @@
   :version "0.2.1"
   :link '(emacs-commentary-link "unicode-whitespace")
   :prefix "unicode-whitespace-"
-  :group 'extensions)
+  :group 'i18n
+  :group 'faces)
 
 ;;;###autoload
 (defgroup unicode-whitespace-definitions nil
