@@ -8,7 +8,7 @@
 ;; Version: 0.2.1
 ;; Last-Updated: 28 Aug 2012
 ;; EmacsWiki: UnicodeWhitespace
-;; Package-Requires: ((ucs-utils "0.6.0") (persistent-soft "0.8.0") (pcache "0.2.3"))
+;; Package-Requires: ((ucs-utils "0.7.0") (persistent-soft "0.8.0") (pcache "0.2.3"))
 ;; Keywords: faces, wp, interface
 ;;
 ;; Simplified BSD License
@@ -680,13 +680,13 @@ trailing tabs."
         (when (and (member from-charname form-feed-names)
                    (string-match-p "box drawing"
                                    (ucs-utils-pretty-name
-                                    (ucs-utils-char (ucs-utils-first-existing-char to-charnames 'cdp)))))
+                                    (ucs-utils-first-existing-char to-charnames 'cdp))))
           (setq display-len 20))
         (when (member from-charname unicode-whitespace-tab-names)
           (setq mark-type 'tab-mark))
         (push (list mark-type
                     (ucs-utils-char from-charname 'error)
-                    (make-vector display-len (ucs-utils-char (ucs-utils-first-existing-char to-charnames 'cdp))))
+                    (make-vector display-len (ucs-utils-first-existing-char to-charnames 'cdp)))
               whitespace-display-mappings)))
 
     (dolist (cell (append unicode-whitespace-standard-line-terminator-mappings
@@ -706,9 +706,9 @@ trailing tabs."
         (push (list mark-type
                     (ucs-utils-char from-charname 'error)
                     (if (eq (ucs-utils-char from-charname 'error) (ucs-utils-char "Carriage Return (CR)" 'error))
-                        (vector (ucs-utils-char (ucs-utils-first-existing-char to-charnames 'cdp)))
+                        (vector (ucs-utils-first-existing-char to-charnames 'cdp))
                       ;; note below, a newline is placed in the vector and displayed in the substitution
-                      (vector (ucs-utils-char (ucs-utils-first-existing-char to-charnames 'cdp)) ?\n)))
+                      (vector (ucs-utils-first-existing-char to-charnames 'cdp) ?\n)))
               whitespace-display-mappings)))))
 
 (defun unicode-whitespace-configure-styles ()
