@@ -4,8 +4,18 @@ Teach Emacs whitespace-mode about fancy characters.
 
 ![Makefile Example](https://raw.github.com/rolandwalker/unicode-whitespace/master/makefile_example.png)
 
+Quickstart
+----------
+
+	(require 'unicode-whitespace)
+
+	(unicode-whitespace-setup 'subdued-faces)
+
+	M-x whitespace-mode RET
+
 unicode-whitespace
 ------------------
+
 Unicode-whitespace makes `whitespace-mode` Unicode-aware in two
 different ways:
 
@@ -50,6 +60,7 @@ when `whitespace-mode` is active:
 
 Compatibility and Requirements
 ------------------------------
+
 Tested on GNU Emacs versions 23.3 and 24.1
 
 Requires [ucs-utils.el](http://github.com/rolandwalker/ucs-utils)
