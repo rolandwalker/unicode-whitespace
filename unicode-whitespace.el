@@ -202,10 +202,6 @@
 
 ;;; requires
 
-;; for let*
-(eval-when-compile
-  (require 'cl))
-
 (require 'whitespace)
 
 (autoload 'ucs-utils-char                "ucs-utils"    "Return the character corresponding to NAME, a UCS name.")
@@ -630,7 +626,7 @@ trailing tabs."
        ;; not buffer-local, and the whitespace library looks at both variables
        (let ((whitespace-style whitespace-style))
          (add-to-list 'whitespace-style 'newline-mark)
-         (set (make-local-variable 'whitespace-active-style) (copy-seq whitespace-style))
+         (set (make-local-variable 'whitespace-active-style) (copy-sequence whitespace-style))
          (whitespace-display-char-off)
          (whitespace-display-char-on))))))
 
