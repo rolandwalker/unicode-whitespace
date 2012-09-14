@@ -5,8 +5,8 @@
 ;; Author: Roland Walker <walker@pobox.com>
 ;; Homepage: http://github.com/rolandwalker/unicode-whitespace
 ;; URL: http://raw.github.com/rolandwalker/unicode-whitespace/master/unicode-whitespace.el
-;; Version: 0.2.2
-;; Last-Updated: 7 Sep 2012
+;; Version: 0.2.3
+;; Last-Updated: 14 Sep 2012
 ;; EmacsWiki: UnicodeWhitespace
 ;; Package-Requires: ((ucs-utils "0.7.0") (persistent-soft "0.8.0") (pcache "0.2.3"))
 ;; Keywords: faces, wp, interface
@@ -235,7 +235,7 @@
 ;;;###autoload
 (defgroup unicode-whitespace nil
   "Teach whitespace-mode about fancy characters."
-  :version "0.2.2"
+  :version "0.2.3"
   :link '(emacs-commentary-link "unicode-whitespace")
   :prefix "unicode-whitespace-"
   :group 'i18n
