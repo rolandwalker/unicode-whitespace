@@ -831,7 +831,7 @@ With negative prefix ARG, sets faces back to default values."
 ;; mangle-whitespace: t
 ;; require-final-newline: t
 ;; coding: utf-8
-;; byte-compile-warnings: (not cl-functions)
+;; byte-compile-warnings: (not cl-functions redefine)
 ;; End:
 ;;
 ;; LocalWords: UnicodeWhitespace ARGS alist nonbreak glyphless
