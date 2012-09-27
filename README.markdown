@@ -1,3 +1,5 @@
+[![Build Status](https://secure.travis-ci.org/rolandwalker/unicode-whitespace.png)](http://travis-ci.org/rolandwalker/unicode-whitespace)
+
 Overview
 ========
 Teach Emacs whitespace-mode about fancy characters.
