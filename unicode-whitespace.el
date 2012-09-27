@@ -753,22 +753,6 @@ trailing tabs."
 ;;; interactive commands
 
 ;;;###autoload
-(defun unicode-whitespace-setup (&optional subdued-faces)
-  "Configure `whitespace-mode' to be aware of extended characters.
-
-This only needs to be run once per session.
-
-When optional FACES is non-nil, change whitespace faces to
-subdued coloring, on the theory that the new display glyphs
-are sufficient to distinguish whitespace."
-  (interactive "P")
-  (unicode-whitespace-recognize-extended-characters)
-  (unicode-whitespace-display-extended-characters)
-  (unicode-whitespace-configure-styles)
-  (when subdued-faces
-    (unicode-whitespace-subdued-faces 1)))
-
-;;;###autoload
 (defun unicode-whitespace-subdued-faces (&optional arg)
   "Change the faces used by `whitespace-mode' to subdued coloring.
 
@@ -797,6 +781,22 @@ With negative prefix ARG, sets faces back to default values."
     (setq whitespace-hspace            'unicode-whitespace-subdued-hspace          )
     (setq whitespace-newline           'unicode-whitespace-subdued-newline         )
     (setq whitespace-line              'unicode-whitespace-subdued-line            )))
+
+;;;###autoload
+(defun unicode-whitespace-setup (&optional subdued-faces)
+  "Configure `whitespace-mode' to be aware of extended characters.
+
+This only needs to be run once per session.
+
+When optional FACES is non-nil, change whitespace faces to
+subdued coloring, on the theory that the new display glyphs
+are sufficient to distinguish whitespace."
+  (interactive "P")
+  (unicode-whitespace-recognize-extended-characters)
+  (unicode-whitespace-display-extended-characters)
+  (unicode-whitespace-configure-styles)
+  (when subdued-faces
+    (unicode-whitespace-subdued-faces 1)))
 
 ;;;###autoload
 (defun unicode-whitespace-toggle-echo ()
