@@ -10,11 +10,13 @@ Teach Emacs whitespace-mode about fancy characters.
 Quickstart
 ----------
 
-	(require 'unicode-whitespace)
-
-	(unicode-whitespace-setup 'subdued-faces)
-
-	M-x whitespace-mode RET
+```lisp
+(require 'unicode-whitespace)
+ 
+(unicode-whitespace-setup 'subdued-faces)
+ 
+;; execute M-x whitespace-mode RET
+```
 
 unicode-whitespace
 ------------------
@@ -36,8 +38,10 @@ To use unicode-whitespace, place the unicode-whitespace.el library
 somewhere Emacs can find it, and add the following to your ~/.emacs
 file:
 
-	(require 'unicode-whitespace)
-	(unicode-whitespace-setup 'subdued-faces)  ; 'subdued-faces is optional
+```lisp
+(require 'unicode-whitespace)
+(unicode-whitespace-setup 'subdued-faces)  ; 'subdued-faces is optional
+```
 
 Then invoke `whitespace-mode` as usual.
 
