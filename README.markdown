@@ -2,6 +2,7 @@
 
 Overview
 ========
+
 Teach Emacs whitespace-mode about fancy characters.
 
 ![Makefile Example](https://raw.github.com/rolandwalker/unicode-whitespace/master/makefile_example.png)
