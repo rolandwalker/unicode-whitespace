@@ -41,6 +41,10 @@ TEST_DEP_4a=ucs-utils-6.0-delta
 TEST_DEP_4a_STABLE_URL=https://raw.github.com/rolandwalker/ucs-utils/cf38ef555fc30d9aefaf3675ebd969948b71496a/ucs-utils-6.0-delta.el
 TEST_DEP_4a_LATEST_URL=https://raw.github.com/rolandwalker/ucs-utils/master/ucs-utils-6.0-delta.el
 
+.PHONY : build downloads downloads-latest autoloads test-autoloads test-travis \
+         test test-interactive clean edit test-dep-1 test-dep-2 test-dep-3     \
+         test-dep-4 test-dep-5 test-dep-6 test-dep-7 test-dep-8 test-dep-9
+
 build :
 	$(EMACS) $(EMACS_BATCH) --eval             \
 	    "(progn                                \
