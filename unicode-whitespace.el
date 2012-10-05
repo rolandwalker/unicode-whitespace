@@ -8,7 +8,7 @@
 ;; Version: 0.2.3
 ;; Last-Updated: 14 Sep 2012
 ;; EmacsWiki: UnicodeWhitespace
-;; Package-Requires: ((ucs-utils "0.7.0") (persistent-soft "0.8.0") (pcache "0.2.3"))
+;; Package-Requires: ((ucs-utils "0.7.0") (persistent-soft "0.8.6") (pcache "0.2.3"))
 ;; Keywords: faces, wp, interface
 ;;
 ;; Simplified BSD License
