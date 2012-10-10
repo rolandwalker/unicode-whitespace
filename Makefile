@@ -95,17 +95,17 @@ test-dep-4 :
 	(echo "Can't load test dependency $(TEST_DEP_4).el, run 'make downloads' to fetch it" ; exit 1)
 
 downloads :
-	$(CURL) '$(TEST_DEP_1_STABLE_URL)'  > $(TEST_DIR)/$(TEST_DEP_1).el
-	$(CURL) '$(TEST_DEP_2_STABLE_URL)'  > $(TEST_DIR)/$(TEST_DEP_2).el
-	$(CURL) '$(TEST_DEP_3_STABLE_URL)'  > $(TEST_DIR)/$(TEST_DEP_3).el
-	$(CURL) '$(TEST_DEP_4_STABLE_URL)'  > $(TEST_DIR)/$(TEST_DEP_4).el
+	$(CURL) '$(TEST_DEP_1_STABLE_URL)'  > '$(TEST_DIR)/$(TEST_DEP_1).el'
+	$(CURL) '$(TEST_DEP_2_STABLE_URL)'  > '$(TEST_DIR)/$(TEST_DEP_2).el'
+	$(CURL) '$(TEST_DEP_3_STABLE_URL)'  > '$(TEST_DIR)/$(TEST_DEP_3).el'
+	$(CURL) '$(TEST_DEP_4_STABLE_URL)'  > '$(TEST_DIR)/$(TEST_DEP_4).el'
 	$(CURL) '$(TEST_DEP_4a_STABLE_URL)' > '$(TEST_DIR)/$(TEST_DEP_4a).el'
 
 downloads-latest :
-	$(CURL) '$(TEST_DEP_1_LATEST_URL)'  > $(TEST_DIR)/$(TEST_DEP_1).el
-	$(CURL) '$(TEST_DEP_2_LATEST_URL)'  > $(TEST_DIR)/$(TEST_DEP_2).el
-	$(CURL) '$(TEST_DEP_3_LATEST_URL)'  > $(TEST_DIR)/$(TEST_DEP_3).el
-	$(CURL) '$(TEST_DEP_4_LATEST_URL)'  > $(TEST_DIR)/$(TEST_DEP_4).el
+	$(CURL) '$(TEST_DEP_1_LATEST_URL)'  > '$(TEST_DIR)/$(TEST_DEP_1).el'
+	$(CURL) '$(TEST_DEP_2_LATEST_URL)'  > '$(TEST_DIR)/$(TEST_DEP_2).el'
+	$(CURL) '$(TEST_DEP_3_LATEST_URL)'  > '$(TEST_DIR)/$(TEST_DEP_3).el'
+	$(CURL) '$(TEST_DEP_4_LATEST_URL)'  > '$(TEST_DIR)/$(TEST_DEP_4).el'
 	$(CURL) '$(TEST_DEP_4a_LATEST_URL)' > '$(TEST_DIR)/$(TEST_DEP_4a).el'
 
 autoloads :
