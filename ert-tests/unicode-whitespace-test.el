@@ -1,5 +1,5 @@
 
-;; requires and setup
+;;; requires and setup
 
 (when load-file-name
   (setq pcache-directory (expand-file-name "test_output/" (file-name-directory load-file-name)))
@@ -17,6 +17,25 @@
 (require 'unicode-whitespace)
 
 ;;; this is a stub - no tests defined
+
+;;; unicode-whitespace-echo ()
+
+;;; unicode-whitespace-hook-func ()
+
+;;; unicode-whitespace-recognize-extended-characters ()
+
+;;; unicode-whitespace-display-extended-characters ()
+
+;;; unicode-whitespace-configure-styles ()
+
+;;; unicode-whitespace-subdued-faces (&optional arg)
+
+;;; unicode-whitespace-setup (&optional subdued-faces)
+
+;;; unicode-whitespace-toggle-echo ()
+
+;;; unicode-whitespace-toggle-newlines ()
+
 
 ;;
 ;; Emacs
