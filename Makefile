@@ -26,6 +26,7 @@ CURL=curl --silent
 EDITOR=runemacs -no_wait
 WORK_DIR=$(shell pwd)
 PACKAGE_NAME=$(shell basename $(WORK_DIR))
+PACKAGE_VERSION=$(shell perl -ne 'print "$$1\n" if m{^;+ *Version: *(\S+)}' $(PACKAGE_NAME).el)
 AUTOLOADS_FILE=$(PACKAGE_NAME)-autoloads.el
 TRAVIS_FILE=.travis.yml
 TEST_DIR=ert-tests
@@ -36,11 +37,9 @@ TEST_DEP_1_LATEST_URL=https://raw.github.com/emacsmirror/emacs/master/lisp/emacs
 TEST_DEP_2=pcache
 TEST_DEP_2_STABLE_URL=https://raw.github.com/sigma/pcache/fa8f863546e2e8f2fc0a70f5cc766a7f584e01b6/pcache.el
 TEST_DEP_2_LATEST_URL=https://raw.github.com/sigma/pcache/master/pcache.el
-
 TEST_DEP_3=list-utils
 TEST_DEP_3_STABLE_URL=https://raw.github.com/rolandwalker/list-utils/a34f1d5c0be3faadd76680509e958797a60c0a41/list-utils.el
 TEST_DEP_3_LATEST_URL=https://raw.github.com/rolandwalker/list-utils/master/list-utils.el
-
 TEST_DEP_4=persistent-soft
 TEST_DEP_4_STABLE_URL=https://raw.github.com/rolandwalker/persistent-soft/de0d196c94a7d124d0acfa13228648d74cf2315f/persistent-soft.el
 TEST_DEP_4_LATEST_URL=https://raw.github.com/rolandwalker/persistent-soft/master/persistent-soft.el
@@ -51,17 +50,27 @@ TEST_DEP_5a=ucs-utils-6.0-delta
 TEST_DEP_5a_STABLE_URL=https://raw.github.com/rolandwalker/ucs-utils/cf38ef555fc30d9aefaf3675ebd969948b71496a/ucs-utils-6.0-delta.el
 TEST_DEP_5a_LATEST_URL=https://raw.github.com/rolandwalker/ucs-utils/master/ucs-utils-6.0-delta.el
 
-.PHONY : build downloads downloads-latest autoloads test-autoloads test-travis \
- test test-prep test-batch test-interactive test-tests clean edit run-pristine \
- run-pristine-local upload-github upload-wiki upload-marmalade test-dep-1      \
- test-dep-2 test-dep-3 test-dep-4 test-dep-5 test-dep-6 test-dep-7 test-dep-8  \
- test-dep-9
+.PHONY : build dist not-dirty pkg-version downloads downloads-latest autoloads \
+ test-autoloads test-travis test test-prep test-batch test-interactive         \
+ test-tests clean edit run-pristine run-pristine-local upload-github           \
+ upload-wiki upload-marmalade test-dep-1 test-dep-2 test-dep-3 test-dep-4      \
+ test-dep-5 test-dep-5a test-dep-6 test-dep-7 test-dep-8 test-dep-9
 
 build :
 	$(RESOLVED_EMACS) $(EMACS_BATCH) --eval    \
 	    "(progn                                \
 	      (setq byte-compile-error-on-warn t)  \
 	      (batch-byte-compile))" *.el
+
+not-dirty :
+	@git diff --quiet '$(PACKAGE_NAME).el' 'plugins/$(PACKAGE_NAME)'*.el || \
+	 ( git --no-pager diff '$(PACKAGE_NAME).el';      \
+	   echo "Uncommitted edits - do a git stash";     \
+	   false )
+
+pkg-version :
+	@test -n '$(PACKAGE_VERSION)'    || \
+	 ( echo "No package version"; false )
 
 test-dep-1 :
 	@cd '$(TEST_DIR)'                                               && \
@@ -222,11 +231,7 @@ edit :
 upload-github :
 	@git push origin master
 
-upload-wiki :
-	@git diff --quiet '$(PACKAGE_NAME).el'         || \
-	 ( git --no-pager diff '$(PACKAGE_NAME).el';      \
-	   echo "Outstanding edits - do a git stash";     \
-	   false )
+upload-wiki : not-dirty
 	@$(RESOLVED_EMACS) $(EMACS_BATCH) --eval          \
 	 "(progn                                          \
 	   (setq package-load-list '((yaoddmuse t)))      \
