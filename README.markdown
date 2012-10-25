@@ -18,11 +18,11 @@ Quickstart
 ;; execute M-x whitespace-mode RET
 ```
 
-unicode-whitespace
-------------------
+Explanation
+-----------
 
-Unicode-whitespace makes `whitespace-mode` Unicode-aware in two
-different ways:
+Unicode-whitespace makes the built-in `whitespace-mode` Unicode-aware
+in two different ways:
 
 1. Recognizing Unicode whitespace characters in your buffer,
    such as "No-Break Space" or "Hair Space".
@@ -55,7 +55,7 @@ conditions is met:
 
 3. The major mode of the buffer is listed in `unicode-whitespace-newline-mark-modes`.
 
-A new `whitespace-style` is provided: 'echo causes the name of the
+A new `whitespace-style` is provided: `'echo` causes the name of the
 whitespace character under the point to be displayed in the echo
 area.  This is not enabled by default.
 

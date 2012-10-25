@@ -25,8 +25,8 @@
 ;;
 ;; Explanation
 ;;
-;; Unicode-whitespace makes `whitespace-mode' Unicode-aware in two
-;; different ways:
+;; Unicode-whitespace makes the built-in `whitespace-mode' Unicode-aware
+;; in two different ways:
 ;;
 ;;     1. Recognizing Unicode whitespace characters in your buffer,
 ;;        such as "No-Break Space" or "Hair Space".
