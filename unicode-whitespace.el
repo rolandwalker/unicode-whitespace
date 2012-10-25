@@ -203,7 +203,7 @@
 ;;; Code:
 ;;
 
-;;; requires
+;;; requirements
 
 (require 'whitespace)
 
