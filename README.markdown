@@ -1,4 +1,4 @@
-[![Build Status](https://secure.travis-ci.org/rolandwalker/unicode-whitespace.png)](http://travis-ci.org/rolandwalker/unicode-whitespace)
+[![Build Status](https://secure.travis-ci.org/rolandwalker/unicode-whitespace.png?branch=master)](http://travis-ci.org/rolandwalker/unicode-whitespace)
 
 Overview
 ========
