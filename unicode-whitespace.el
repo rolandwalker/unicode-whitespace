@@ -239,7 +239,9 @@
 (defgroup unicode-whitespace nil
   "Teach whitespace-mode about fancy characters."
   :version "0.2.3"
-  :link '(emacs-commentary-link "unicode-whitespace")
+  :link '(emacs-commentary-link :tag "Commentary" "unicode-whitespace")
+  :link '(url-link :tag "Github" "http://github.com/rolandwalker/unicode-whitespace")
+  :link '(url-link :tag "EmacsWiki" "http://emacswiki.org/emacs/UnicodeWhitespace")
   :prefix "unicode-whitespace-"
   :group 'i18n
   :group 'faces)
