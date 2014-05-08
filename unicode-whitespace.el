@@ -630,8 +630,8 @@ Newline marks can be toggled interactively with
 Also (an unrelated bugfix) turn off `show-trailing-whitespace'
 temporarily when `whitespace-mode' is on and restore the original
 value for the buffer when turning off `whitespace-mode'.  This is
-needed because show-trailing-whitespace overrides on the face for
-trailing tabs."
+needed because `show-trailing-whitespace' overrides on the face
+for trailing tabs."
   (cond
     ((not whitespace-mode)
      (set (make-local-variable 'whitespace-active-style) nil)
@@ -808,8 +808,8 @@ With negative prefix ARG, sets faces back to default values."
 
 This only needs to be run once per session.
 
-When optional FACES is non-nil, change whitespace faces to
-subdued coloring, on the theory that the new display glyphs
+When optional SUBDUED-FACES is non-nil, change whitespace faces
+to subdued coloring, on the theory that the new display glyphs
 are sufficient to distinguish whitespace."
   (interactive "P")
   (unicode-whitespace-recognize-extended-characters)
