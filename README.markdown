@@ -1,14 +1,12 @@
 [![Build Status](https://secure.travis-ci.org/rolandwalker/unicode-whitespace.png?branch=master)](http://travis-ci.org/rolandwalker/unicode-whitespace)
 
-Overview
-========
+# Overview
 
 Teach Emacs whitespace-mode about fancy characters.
 
 ![Makefile Example](https://raw.githubusercontent.com/rolandwalker/unicode-whitespace/master/makefile_example.png)
 
-Quickstart
-----------
+## Quickstart
 
 ```elisp
 (require 'unicode-whitespace)
@@ -18,8 +16,7 @@ Quickstart
 ;; execute M-x whitespace-mode RET
 ```
 
-Explanation
------------
+## Explanation
 
 Unicode-whitespace makes the built-in `whitespace-mode` Unicode-aware
 in two different ways:
@@ -65,8 +62,7 @@ when `whitespace-mode` is active:
 	unicode-whitespace-toggle-newlines
 	unicode-whitespace-toggle-echo
 
-Compatibility and Requirements
-------------------------------
+## Compatibility and Requirements
 
 	GNU Emacs version 24.4-devel     : yes, at the time of writing
 	GNU Emacs version 24.3           : yes
