@@ -10,7 +10,7 @@ Teach Emacs whitespace-mode about fancy characters.
 Quickstart
 ----------
 
-```lisp
+```elisp
 (require 'unicode-whitespace)
  
 (unicode-whitespace-setup 'subdued-faces)
@@ -38,7 +38,7 @@ To use unicode-whitespace, place the unicode-whitespace.el library
 somewhere Emacs can find it, and add the following to your ~/.emacs
 file:
 
-```lisp
+```elisp
 (require 'unicode-whitespace)
 (unicode-whitespace-setup 'subdued-faces)  ; 'subdued-faces is optional
 ```
