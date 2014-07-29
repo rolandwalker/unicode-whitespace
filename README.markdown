@@ -29,7 +29,7 @@ in two different ways:
 
 This library also makes some minor adjustments to the default
 settings of `whitespace-mode`, and exposes character-by-character
-display substitution mappings in customize.
+display substitution mappings in `customize`.
 
 To use unicode-whitespace, place the `unicode-whitespace.el` library
 somewhere Emacs can find it, and add the following to your `~/.emacs`
