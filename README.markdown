@@ -6,6 +6,10 @@ Teach Emacs whitespace-mode about fancy characters.
 
 ![Makefile Example](https://raw.githubusercontent.com/rolandwalker/unicode-whitespace/master/makefile_example.png)
 
+ * [Quickstart](#quickstart)
+ * [Explanation](#explanation)
+ * [Compatibility and Requirements](#compatibility-and-requirements)
+
 ## Quickstart
 
 ```elisp
